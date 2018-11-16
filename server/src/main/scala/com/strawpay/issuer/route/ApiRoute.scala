@@ -4,9 +4,6 @@ import akka.http.scaladsl.server.{Directives, Route}
 import com.strawpay.issuer.api.{Account, Note, RegisterForm}
 import de.heikoseeberger.akkahttpupickle.UpickleSupport
 
-/**
-  *
-  */
 trait ApiRoute extends Directives with UpickleSupport {
 
   def apiRoute: Route = pathPrefix("api") {

@@ -1,5 +1,4 @@
 package com.strawpay.issuer.route
-import akka.http.scaladsl.marshalling.Marshal
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.testkit.ScalatestRouteTest
@@ -8,11 +7,8 @@ import de.heikoseeberger.akkahttpupickle.UpickleSupport
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.{Matchers, WordSpec}
 
-/**
-  *
-  */
 class ApiRouteSpec extends WordSpec with ApiRoute with Matchers with ScalatestRouteTest
-with ScalaFutures with UpickleSupport {
+  with ScalaFutures with UpickleSupport {
   "The ApiRoute" should {
 
     "Do not handle call to root" in {
