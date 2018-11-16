@@ -8,18 +8,22 @@
 GET http://127.0.0.1:8080/assets/hello.md
 
 ###
-GET http://127.0.0.1:8080/
+GET http://127.0.0.1:8080/api«
 
 ###
-GET http://localhost:8080/api/register
+POST http://localhost:8080/api/register
 
+{
+  "phoneNumber": "46768044747",
+  "email": "zac@cyberzac.se"
+}
 ###
 POST http://localhost:8080/api/register
 Content-Type: application/json
 
 {
   "phoneNumber": "46768044747",
-  "email2": "zac@cyberzac.se"
+  "email": "zac@cyberzac.se"
 }
 
 ###

@@ -15,8 +15,7 @@ object WebServer {
     val port = config.getInt("http.port")
 
     val service = new WebService()
-
-    Http().bindAndHandle(service.apiRoute, interface, port)
+    Http().bindAndHandle(service.route, interface, port)
 
     println(s"Server online at http://$interface:$port")
   }
